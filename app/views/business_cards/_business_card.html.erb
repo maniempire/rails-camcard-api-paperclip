@@ -1,0 +1,11 @@
+<div class="media">
+  <div class="media-left">
+    <%#= link_to image_tag(business_card.image.url, class: 'media-object'), business_card.image.url, target: '_blank' %>
+	<%= link_to image_tag(business_card.image.url(:thumb), class: 'media-object'), business_card.image.url, target: '_blank' %>
+  </div>
+ 
+  <div class="media-body">
+      <h4 class="media-heading"><%= business_card.title %></h4>
+      <%= link_to 'Remove', business_card_path(business_card), class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure?'} %>
+    </div>
+</div>
